@@ -1,6 +1,8 @@
+import { faker } from '@faker-js/faker';
+import boolean from '@fakerjs/boolean';
 const shortid = require('shortid'); // shortid.generate() returns a unique "short" id
 const txtgen = require('txtgen'); // txtgen.sentence() returns random "readable" sentences
-const faker = require('faker'); // faker is used for generating random fake data.
+//const faker = require('faker-js'); // faker is used for generating random fake data.
 const _ = require('lodash'); // lodash is a utility lib for Javascript
 
 const users = generateUsers(10);
@@ -43,7 +45,7 @@ function generateMsg(number) {
   return {
     number,
     text: txtgen.sentence(),
-    is_user_msg: faker.random.boolean(),
+    is_user_msg: boolean(),
   };
 }
 /**
